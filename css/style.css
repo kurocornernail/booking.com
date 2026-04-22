@@ -1240,8 +1240,19 @@ video {
   .floating-book-btn {
     bottom: 1.5rem;
     right: 1.5rem;
-    padding: 1rem;
+    width: 56px;
+    height: 56px;
+    padding: 0;
     border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+  }
+
+  .floating-book-btn-icon {
+    font-size: 1.5rem;
+    line-height: 1;
   }
 
   .lightbox-prev { left: 0.5rem; }
