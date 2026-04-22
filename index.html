@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kuro Corner Nail — Korea • Japan • Y2K Design</title>
+  <meta name="description" content="Kuro Corner Nail — Chuyên vẽ tay & Nailbox thiết kế. Korea, Japan, Y2K Design. Booking now!">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=2">
+</head>
+<body>
+  <!-- CRT Overlay -->
+  <div class="crt-overlay" id="crtOverlay"></div>
+  <div class="scanlines" id="scanlines"></div>
+
+  <!-- Loading Screen -->
+  <div class="loader" id="loader">
+    <div class="loader-content">
+      <div class="loader-cat">🐾</div>
+      <div class="loader-text" data-vi="Đang mở cửa tiệm..." data-en="Opening the salon...">Đang mở cửa tiệm...</div>
+      <div class="loader-bar"><div class="loader-bar-fill" id="loaderFill"></div></div>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">
+        <span class="nav-logo-icon">🐾</span>
+        <span class="nav-logo-text">Kuro Corner Nail</span>
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="#about" class="nav-link" data-vi="Về Chúng Tôi" data-en="About">Về Chúng Tôi</a>
+        <a href="#gallery" class="nav-link" data-vi="Bộ Sưu Tập" data-en="Gallery">Bộ Sưu Tập</a>
+        <a href="#contact" class="nav-link" data-vi="Liên Hệ" data-en="Contact">Liên Hệ</a>
+        <a href="https://www.instagram.com/kuro.corner.nail/" target="_blank" rel="noopener" class="nav-link nav-book-btn" data-vi="📩 Đặt Lịch" data-en="📩 Book Now">📩 Đặt Lịch</a>
+        <button class="lang-toggle" id="langToggle" aria-label="Toggle language">EN</button>
+      </div>
+      <button class="nav-hamburger" id="navHamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#about" class="mobile-menu-link" data-vi="Về Chúng Tôi" data-en="About">Về Chúng Tôi</a>
+    <a href="#gallery" class="mobile-menu-link" data-vi="Bộ Sưu Tập" data-en="Gallery">Bộ Sưu Tập</a>
+    <a href="#contact" class="mobile-menu-link" data-vi="Liên Hệ" data-en="Contact">Liên Hệ</a>
+    <a href="https://www.instagram.com/kuro.corner.nail/" target="_blank" rel="noopener" class="mobile-menu-link mobile-book-btn" data-vi="📩 Đặt Lịch Ngay" data-en="📩 Book Now">📩 Đặt Lịch Ngay</a>
+    <button class="lang-toggle-mobile" id="langToggleMobile">EN</button>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <div class="hero-gradient"></div>
+      <div class="hero-particles" id="heroParticles"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-badge" data-vi="🎀 Korea • Japan • Y2K Design" data-en="🎀 Korea • Japan • Y2K Design">🎀 Korea • Japan • Y2K Design</div>
+      <h1 class="hero-title">
+        <span class="hero-title-line" data-vi="Kuro Corner Nail" data-en="Kuro Corner Nail">Kuro Corner Nail</span>
+        <span class="hero-title-sub" data-vi="Góc Nhỏ Của Yêu Thương" data-en="A Little Corner of Love">Góc Nhỏ Của Yêu Thương</span>
+      </h1>
+      <p class="hero-desc" data-vi="Chuyên vẽ tay & Nailbox thiết kế — Nơi mỗi bộ nail là một câu chuyện" data-en="Hand-painted & Custom Nailbox — Where every set tells a story">Chuyên vẽ tay & Nailbox thiết kế — Nơi mỗi bộ nail là một câu chuyện</p>
+      <div class="hero-actions">
+        <a href="https://www.instagram.com/kuro.corner.nail/" target="_blank" rel="noopener" class="btn btn-primary" data-vi="📩 Đặt Lịch Qua Instagram" data-en="📩 Book via Instagram">📩 Đặt Lịch Qua Instagram</a>
+        <a href="tel:0369710440" class="btn btn-outline" data-vi="☎️ Gọi Ngay" data-en="☎️ Call Now">☎️ Gọi Ngay</a>
+      </div>
+      <div class="hero-scroll-indicator">
+        <span class="hero-scroll-text" data-vi="Cuộn xuống" data-en="Scroll down">Cuộn xuống</span>
+        <div class="hero-scroll-arrow">↓</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="about-header">
+        <span class="section-badge" data-vi="🐾 Câu Chuyện" data-en="🐾 Our Story">🐾 Câu Chuyện</span>
+        <h2 class="section-title" data-vi="Về Kuro Corner Nail" data-en="About Kuro Corner Nail">Về Kuro Corner Nail</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-image">
+          <div class="about-image-frame">
+            <img src="gallery-web/kuro/Kuro.jpg" alt="Kuro - chú mèo xám nhỏ" loading="lazy" class="about-image-kuro">
+          </div>
+        </div>
+        <div class="about-text">
+          <div class="about-text-block">
+            <p class="about-p" data-vi="Có một chú mèo Anh lông ngắn màu xám tên Kuro. Dù không nói, nhưng ánh mắt nó thì biết nhìn thẳng vào lòng tôi. Mỗi buổi chiều, khi ánh nắng xiên qua cửa sổ, Kuro lại cuộn tròn ở một góc riêng của mình — bình yên, dịu dàng, và hoàn toàn là chính nó." data-en="There was a gray British Shorthair cat named Kuro. Though silent, its eyes spoke straight to my heart. Every afternoon, as sunlight slanted through the window, Kuro would curl up in its own little corner — peaceful, gentle, and completely itself.">Có một chú mèo Anh lông ngắn màu xám tên Kuro. Dù không nói, nhưng ánh mắt nó thì biết nhìn thẳng vào lòng tôi. Mỗi buổi chiều, khi ánh nắng xiên qua cửa sổ, Kuro lại cuộn tròn ở một góc riêng của mình — bình yên, dịu dàng, và hoàn toàn là chính nó.</p>
+            <p class="about-p" data-vi="Chính cái góc nhỏ ấy đã truyền cảm hứng để Kuro Corner Nail ra đời. Chúng tôi tin rằng mỗi người đều xứng đáng có một góc riêng để sống chậm lại." data-en="That little corner inspired the birth of Kuro Corner Nail. We believe everyone deserves a corner to slow down.">Chính cái góc nhỏ ấy đã truyền cảm hứng để Kuro Corner Nail ra đời. Chúng tôi tin rằng mỗi người đều xứng đáng có một góc riêng để sống chậm lại.</p>
+            <p class="about-p" data-vi="Tại Kuro Corner Nail, chúng tôi không chỉ làm đẹp cho móng tay. Chúng tôi tạo ra một không gian để bạn cảm thấy được chăm sóc — từ ánh đèn ấm, mùi hương dịu nhẹ, đến từng đường cọ tỉ mỉ được thực hiện bằng cả tâm huyết." data-en="At Kuro Corner Nail, we don't just beautify nails. We create a space where you feel cared for — from warm lighting, gentle scents, to every meticulous brushstroke made with passion.">Tại Kuro Corner Nail, chúng tôi không chỉ làm đẹp cho móng tay. Chúng tôi tạo ra một không gian để bạn cảm thấy được chăm sóc — từ ánh đèn ấm, mùi hương dịu nhẹ, đến từng đường cọ tỉ mỉ được thực hiện bằng cả tâm huyết.</p>
+          </div>
+          <div class="about-stats">
+            <div class="about-stat">
+              <div class="about-stat-num">✨</div>
+              <a href="https://www.instagram.com/vyvy.nailart/" target="_blank" rel="noopener" class="about-stat-link" data-vi="Từ @vyvy.nailart" data-en="From @vyvy.nailart">Từ @vyvy.nailart</a>
+            </div>
+            <div class="about-stat">
+              <div class="about-stat-num">🎨</div>
+              <div class="about-stat-label" data-vi="Vẽ tay & Thiết kế" data-en="Hand-painted & Design">Vẽ tay & Thiết kế</div>
+            </div>
+            <div class="about-stat">
+              <div class="about-stat-num">⏰</div>
+              <div class="about-stat-label" data-vi="10:00 AM — 10:00 PM" data-en="10:00 AM — 10:00 PM">10:00 AM — 10:00 PM</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section class="gallery" id="gallery">
+    <div class="container">
+      <div class="gallery-header">
+        <span class="section-badge" data-vi="💅 Tác Phẩm" data-en="💅 Our Work">💅 Tác Phẩm</span>
+        <h2 class="section-title" data-vi="Bộ Sưu Tập" data-en="Collections">Bộ Sưu Tập</h2>
+        <p class="gallery-subtitle" data-vi="Mỗi bộ nail là một câu chuyện nhỏ" data-en="Every nail set tells a little story">Mỗi bộ nail là một câu chuyện nhỏ</p>
+      </div>
+
+      <!-- Collection Tabs -->
+      <div class="gallery-tabs" id="galleryTabs">
+        <button class="gallery-tab active" data-collection="0" data-vi="Nhật Ký" data-en="Diary">Nhật Ký</button>
+        <button class="gallery-tab" data-collection="1" data-vi="Bầu Trời Sao" data-en="Starry Sky">Bầu Trời Sao</button>
+        <button class="gallery-tab" data-collection="2" data-vi="Malibu Cover" data-en="Malibu Cover">Malibu Cover</button>
+        <button class="gallery-tab" data-collection="3" data-vi="Nail Box" data-en="Nail Box">Nail Box</button>
+        <button class="gallery-tab" data-collection="4" data-vi="Cyber-core" data-en="Cyber-core">Cyber-core</button>
+        <button class="gallery-tab" data-collection="5" data-vi="Tết Xinh" data-en="Spring Festival">Tết Xinh</button>
+        <button class="gallery-tab" data-collection="6" data-vi="Dịu Dàng" data-en="Gentle">Dịu Dàng</button>
+      </div>
+
+      <!-- Collection Slides -->
+      <div class="gallery-carousel" id="galleryCarousel">
+        <!-- Collection 1: Nhật Ký -->
+        <div class="gallery-slide active" data-slide="0">
+          <div class="gallery-slide-desc" data-vi="Thật ra cuốn Nhật Ký này còn dài nữa. Chân thành cảm ơn những khách hàng đã dành niềm tin cho shop 🫶🏻" data-en="This diary goes on much longer. Sincere thanks to all customers who trusted us 🫶🏻">Thật ra cuốn Nhật Ký này còn dài nữa. Chân thành cảm ơn những khách hàng đã dành niềm tin cho shop 🫶🏻</div>
+          <div class="gallery-slide-grid">
+            <div class="gallery-item" data-src="gallery-web/collection-1/1.jpg"><img src="gallery-web/collection-1/1.jpg" alt="Collection 1 - Photo 1" loading="lazy"></div>
+            <div class="gallery-item" data-src="gallery-web/collection-1/2.jpg"><img src="gallery-web/collection-1/2.jpg" alt="Collection 1 - Photo 2" loading="lazy"></div>
+            <div class="gallery-item" data-src="gallery-web/collection-1/3.jpg"><img src="gallery-web/collection-1/3.jpg" alt="Collection 1 - Photo 3" loading="lazy"></div>
+            <div class="gallery-item" data-src="gallery-web/collection-1/4.jpg"><img src="gallery-web/collection-1/4.jpg" alt="Collection 1 - Photo 4" loading="lazy"></div>
+            <div class="gallery-item" data-src="gallery-web/collection-1/5.jpg"><img src="gallery-web/collection-1/5.jpg" alt="Collection 1 - Photo 5" loading="lazy"></div>
+            <div class="gallery-item" data-src="gallery-web/collection-1/6.jpg"><img src="gallery-web/collection-1/6.jpg" alt="Collection 1 - Photo 6" loading="lazy"></div>
+            <div class="gallery-item" data-src="gallery-web/collection-1/7.jpg"><img src="gallery-web/collection-1/7.jpg" alt="Collection 1 - Photo 7" loading="lazy"></div>
+            <div class="gallery-item" data-src="gallery-web/collection-1/8.jpg"><img src="gallery-web/collection-1/8.jpg" alt="Collection 1 - Photo 8" loading="lazy"></div>
+            <div class="gallery-item" data-src="gallery-web/collection-1/9.jpg"><img src="gallery-web/collection-1/9.jpg" alt="Collection 1 - Photo 9" loading="lazy"></div>
+            <div class="gallery-item" data-src="gallery-web/collection-1/10.jpg"><img src="gallery-web/collection-1/10.jpg" alt="Collection 1 - Photo 10" loading="lazy"></div>
+          </div>
+        </div>
+
+        <!-- Collection 2: Bầu Trời Sao -->
+        <div class="gallery-slide" data-slide="1">
+          <div class="gallery-slide-desc" data-vi="Một chút huyền bí của bầu trời sao đêm kết hợp cùng sự huyền bí dưới đại dương sâu thẳm. Dành cho nàng mệnh Thủy yêu thích sự tinh tế không phô trương." data-en="A touch of starry night mystery meets the deep ocean. For Water element girls who love subtle elegance.">Một chút huyền bí của bầu trời sao đêm kết hợp cùng sự huyền bí dưới đại dương sâu thẳm. Dành cho nàng mệnh Thủy yêu thích sự tinh tế không phô trương.</div>
+          <div class="gallery-slide-grid">
+            <div class="gallery-item" data-src="gallery-web/collection-2/1.jpg"><img src="gallery-web/collection-2/1.jpg" alt="Collection 2 - Photo 1" loading="lazy"></div>
+            <div class="gallery-item" data-src="gallery-web/collection-2/2.jpg"><img src="gallery-web/collection-2/2.jpg" alt="Collection 2 - Photo 2" loading="lazy"></div>
+            <div class="gallery-item" data-src="gallery-web/collection-2/3.jpg"><img src="gallery-web/collection-2/3.jpg" alt="Collection 2 - Photo 3" loading="lazy"></div>
+            <div class="gallery-item" data-src="gallery-web/collection-2/4.jpg"><img src="gallery-web/collection-2/4.jpg" alt="Collection 2 - Photo 4" loading="lazy"></div>
+            <div class="gallery-item" data-src="gallery-web/collection-2/5.jpg"><img src="gallery-web/collection-2/5.jpg" alt="Collection 2 - Photo 5" loading="lazy"></div>
+            <div class="gallery-item" data-src="gallery-web/collection-2/6.jpg"><img src="gallery-web/collection-2/6.jpg" alt="Collection 2 - Photo 6" loading="lazy"></div>
+            <div class="gallery-item" data-src="gallery-web/collection-2/7.jpg"><img src="gallery-web/collection-2/7.jpg" alt="Collection 2 - Photo 7" loading="lazy"></div>
+          </div>
+        </div>
+
+        <!-- Collection 3: Malibu Cover -->
+        <div class="gallery-slide" data-slide="2">
+          <div class="gallery-slide-desc" data-vi="Thử thách bản thân cover lại siêu phẩm từ @malibuclubart. Put my heart and soul into this set! 🖤" data-en="Challenging myself to recreate an iconic design from @malibuclubart. Put my heart and soul into this! 🖤">Thử thách bản thân cover lại siêu phẩm từ @malibuclubart. Put my heart and soul into this set! 🖤</div>
+          <div class="gallery-slide-grid gallery-slide-mixed">
+            <div class="gallery-item gallery-item-wide" data-src="gallery-web/collection-3/1.jpg"><img src="gallery-web/collection-3/1.jpg" alt="Collection 3 - Photo 1" loading="lazy"></div>
+            <div class="gallery-item gallery-item-video">
+              <video controls preload="metadata" poster="gallery-web/collection-3/1.jpg">
+                <source src="gallery-web/collection-3/video 1.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+
+        <!-- Collection 4: Nail Box -->
+        <div class="gallery-slide" data-slide="3">
+          <div class="gallery-slide-desc" data-vi="Mỗi bộ Nail Box không chỉ là phụ kiện, mà là món quà nhỏ shop gửi gắm sự chăm chút từ khâu thiết kế đến đóng gói. ✨" data-en="Every Nail Box is not just an accessory, but a little gift crafted with care from design to packaging. ✨">Mỗi bộ Nail Box không chỉ là phụ kiện, mà là món quà nhỏ shop gửi gắm sự chăm chút từ khâu thiết kế đến đóng gói. ✨</div>
+          <div class="gallery-slide-grid gallery-slide-mixed">
+            <div class="gallery-item gallery-item-video gallery-item-wide">
+              <video controls preload="metadata">
+                <source src="gallery-web/collection-4/video 1.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+
+        <!-- Collection 5: Cyber-core -->
+        <div class="gallery-slide" data-slide="4">
+          <div class="gallery-slide-desc" data-vi="Gạt đi những mẫu nail truyền thống, đây là thời đại của Cyber-core! Hiệu ứng loang, mắt mèo, ẩn xà cừ và tráng gương bạc. ⛓️🧬" data-en="Forget traditional nails — welcome to the Cyber-core era! Blending effects, cat-eye, mother-of-pearl, and silver mirror. ⛓️🧬">Gạt đi những mẫu nail truyền thống, đây là thời đại của Cyber-core! Hiệu ứng loang, mắt mèo, ẩn xà cừ và tráng gương bạc. ⛓️🧬</div>
+          <div class="gallery-slide-grid gallery-slide-mixed">
+            <div class="gallery-item" data-src="gallery-web/collection-5/1.jpg"><img src="gallery-web/collection-5/1.jpg" alt="Collection 5 - Photo 1" loading="lazy"></div>
+            <div class="gallery-item" data-src="gallery-web/collection-5/2.jpg"><img src="gallery-web/collection-5/2.jpg" alt="Collection 5 - Photo 2" loading="lazy"></div>
+            <div class="gallery-item" data-src="gallery-web/collection-5/3.jpg"><img src="gallery-web/collection-5/3.jpg" alt="Collection 5 - Photo 3" loading="lazy"></div>
+            <div class="gallery-item gallery-item-video">
+              <video controls preload="metadata" poster="gallery-web/collection-5/1.jpg">
+                <source src="gallery-web/collection-5/video_1.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+
+        <!-- Collection 6: Tết -->
+        <div class="gallery-slide" data-slide="5">
+          <div class="gallery-slide-desc" data-vi="Tấn tài tấn lộc cát tường 🧧 Đỏ đỏ xanh xanh cho cả năm may mắn nào!" data-en="Prosperity and luck for the new year 🧧 Red and green for a year of fortune!">Tấn tài tấn lộc cát tường 🧧 Đỏ đỏ xanh xanh cho cả năm may mắn nào!</div>
+          <div class="gallery-slide-grid gallery-slide-mixed">
+            <div class="gallery-item gallery-item-video gallery-item-wide">
+              <video controls preload="metadata">
+                <source src="gallery-web/collection-6/SaveClip.App_AQMwfTSf3U92xVCA7plHxdY6qLBbOTfc0NeLctuu34RCY34vahrCWn5wMdLInAQ57Dfj0GI3iHYO4Q3AztMR4nlmNlC1vpq6C4QnMxk.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+
+        <!-- Collection 7: Dịu Dàng -->
+        <div class="gallery-slide" data-slide="6">
+          <div class="gallery-slide-desc" data-vi="Gói ghém một chút dịu dàng lên đôi tay... 🌸 Nail xinh - Mood đỉnh! 💅✨" data-en="Wrapping a little gentleness on your hands... 🌸 Pretty nails - Great mood! 💅✨">Gói ghém một chút dịu dàng lên đôi tay... 🌸 Nail xinh - Mood đỉnh! 💅✨</div>
+          <div class="gallery-slide-grid">
+            <div class="gallery-item" data-src="gallery-web/collection-7/SaveClip.App_604392347_17852073645603698_14384750720527676_n.jpg"><img src="gallery-web/collection-7/SaveClip.App_604392347_17852073645603698_14384750720527676_n.jpg" alt="Collection 7 - Photo 1" loading="lazy"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Carousel Navigation -->
+      <div class="carousel-nav">
+        <button class="carousel-btn" id="carouselPrev" aria-label="Previous">←</button>
+        <div class="carousel-dots" id="carouselDots"></div>
+        <button class="carousel-btn" id="carouselNext" aria-label="Next">→</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="contact-header">
+        <span class="section-badge" data-vi="📍 Ghé Thăm" data-en="📍 Visit Us">📍 Ghé Thăm</span>
+        <h2 class="section-title" data-vi="Liên Hệ & Đặt Lịch" data-en="Contact & Booking">Liên Hệ & Đặt Lịch</h2>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-card">
+          <div class="contact-card-icon">🏠</div>
+          <h3 class="contact-card-title" data-vi="Địa Chỉ" data-en="Address">Địa Chỉ</h3>
+          <p class="contact-card-text">212/4 đường Đỗ Xuân Hợp, phường Phước Long A, TP Thủ Đức</p>
+          <a href="https://maps.google.com/?q=212/4+Đỗ+Xuân+Hợp+Phước+Long+A+Thủ+Đức" target="_blank" rel="noopener" class="contact-card-link" data-vi="Xem trên Google Maps →" data-en="View on Google Maps →">Xem trên Google Maps →</a>
+        </div>
+        <div class="contact-card">
+          <div class="contact-card-icon">⏰</div>
+          <h3 class="contact-card-title" data-vi="Giờ Làm Việc" data-en="Working Hours">Giờ Làm Việc</h3>
+          <p class="contact-card-text" data-vi="10:00 AM — 10:00 PM" data-en="10:00 AM — 10:00 PM">10:00 AM — 10:00 PM</p>
+          <p class="contact-card-text contact-card-note" data-vi="Mở cửa tất cả các ngày trong tuần" data-en="Open every day of the week">Mở cửa tất cả các ngày trong tuần</p>
+        </div>
+        <div class="contact-card">
+          <div class="contact-card-icon">☎️</div>
+          <h3 class="contact-card-title" data-vi="Điện Thoại" data-en="Phone">Điện Thoại</h3>
+          <a href="tel:0369710440" class="contact-card-phone">0369.710.440</a>
+          <p class="contact-card-note" data-vi="Nhấn để gọi ngay" data-en="Tap to call now">Nhấn để gọi ngay</p>
+        </div>
+        <div class="contact-card contact-card-social">
+          <div class="contact-card-icon">🌐</div>
+          <h3 class="contact-card-title" data-vi="Mạng Xã Hội" data-en="Social Media">Mạng Xã Hội</h3>
+          <div class="social-links">
+            <a href="https://www.instagram.com/kuro.corner.nail/" target="_blank" rel="noopener" class="social-link social-instagram" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+              Instagram
+            </a>
+            <a href="https://www.facebook.com/Kuro.Corner.Nail" target="_blank" rel="noopener" class="social-link social-facebook" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+              Facebook
+            </a>
+            <a href="https://www.threads.com/@kuro.corner.nail?xmt=AQF04A1ny_M5HohaleSIPZMPofMwi19DZJ6TF8x1X0xz7NU" target="_blank" rel="noopener" class="social-link social-threads" aria-label="Threads">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M12.186 24h-.007c-3.581-.024-6.334-1.205-8.184-3.519C2.35 18.44 1.5 15.586 1.472 12.01v-.017c.03-3.579.879-6.43 2.525-8.472C5.845 1.205 8.6.024 12.18 0h.014c2.716.02 5.016.863 6.836 2.502 1.715 1.543 2.724 3.738 3.003 6.529H17.8a5.7 5.7 0 00-1.892-3.746A5.075 5.075 0 0012.18 4.02c-1.77.013-3.132.603-4.043 1.755-.873 1.1-.846 2.477-.833 3.026v.073c-.016.574-.03 1.216.21 1.858.253.68.68 1.22 1.27 1.607.59.387 1.33.58 2.197.58.53 0 1.03-.076 1.5-.227.47-.15.89-.37 1.26-.65.37-.28.68-.62.93-1.01.25-.39.43-.82.54-1.28h4.226c-.21 1.44-.69 2.7-1.44 3.78-.75 1.08-1.74 1.93-2.97 2.55-1.23.62-2.63.93-4.2.93-1.57 0-2.97-.31-4.2-.93-1.23-.62-2.22-1.47-2.97-2.55-.75-1.08-1.23-2.34-1.44-3.78H.62c.21 1.44.69 2.7 1.44 3.78.75 1.08 1.74 1.93 2.97 2.55 1.23.62 2.63.93 4.2.93 1.57 0 2.97-.31 4.2-.93 1.23-.62 2.22-1.47 2.97-2.55.75-1.08 1.23-2.34 1.44-3.78h4.226c-.21 1.44-.69 2.7-1.44 3.78-.75 1.08-1.74 1.93-2.97 2.55-1.23.62-2.63.93-4.2.93z"/></svg>
+              Threads
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <span class="footer-logo">🐾 Kuro Corner Nail</span>
+          <p class="footer-tagline" data-vi="Lấy cảm hứng từ chú mèo xám nhỏ yêu quý — người đã dạy chúng tôi rằng đôi khi, điều tốt nhất bạn có thể làm là tìm một góc ấm áp và ở lại." data-en="Inspired by a beloved little gray cat — who taught us that sometimes, the best thing you can do is find a warm corner and stay.">Lấy cảm hứng từ chú mèo xám nhỏ yêu quý — người đã dạy chúng tôi rằng đôi khi, điều tốt nhất bạn có thể làm là tìm một góc ấm áp và ở lại.</p>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2024 Kuro Corner Nail. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Booking Button -->
+  <a href="https://www.instagram.com/kuro.corner.nail/" target="_blank" rel="noopener" class="floating-book-btn" id="floatingBookBtn" aria-label="Book now via Instagram">
+    <span class="floating-book-btn-icon">📩</span>
+    <span class="floating-book-btn-text" data-vi="Đặt Lịch" data-en="Book Now">Đặt Lịch</span>
+  </a>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close">✕</button>
+    <button class="lightbox-prev" id="lightboxPrev" aria-label="Previous">←</button>
+    <button class="lightbox-next" id="lightboxNext" aria-label="Next">→</button>
+    <div class="lightbox-content" id="lightboxContent">
+      <img src="" alt="" id="lightboxImg">
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
