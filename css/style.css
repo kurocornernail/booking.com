@@ -615,6 +615,540 @@ video {
   z-index: 0;
 }
 
+/* === Sparkles around Kuro image === */
+.sparkles-container {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.sparkle {
+  position: absolute;
+  font-size: 1.2rem;
+  animation: sparkleFloat 2.5s ease-in-out infinite;
+  animation-delay: var(--delay, 0s);
+  opacity: 0;
+  filter: drop-shadow(0 0 4px rgba(255, 215, 0, 0.6));
+}
+
+@keyframes sparkleFloat {
+  0% { opacity: 0; transform: scale(0.3) translateY(0) rotate(0deg); }
+  20% { opacity: 1; transform: scale(1.1) translateY(-5px) rotate(15deg); }
+  40% { opacity: 0.8; transform: scale(0.9) translateY(-10px) rotate(-10deg); }
+  60% { opacity: 1; transform: scale(1.2) translateY(-8px) rotate(20deg); }
+  80% { opacity: 0.6; transform: scale(0.8) translateY(-15px) rotate(-5deg); }
+  100% { opacity: 0; transform: scale(0.3) translateY(-20px) rotate(0deg); }
+}
+
+/* === Paw icon color change to gray === */
+.nav-logo-icon {
+  filter: grayscale(100%) brightness(0.7);
+  display: inline-block;
+}
+
+.footer-logo {
+  filter: grayscale(100%) brightness(0.8);
+}
+
+.section-badge {
+  filter: grayscale(100%) brightness(0.6);
+}
+
+/* === Cute floating hearts animation === */
+.floating-hearts {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.floating-heart {
+  position: absolute;
+  font-size: 1rem;
+  opacity: 0;
+  animation: heartFloat 8s ease-in-out infinite;
+}
+
+@keyframes heartFloat {
+  0% { opacity: 0; transform: translateY(100vh) rotate(0deg) scale(0.5); }
+  10% { opacity: 0.4; }
+  50% { opacity: 0.3; transform: translateY(50vh) rotate(180deg) scale(1); }
+  90% { opacity: 0.1; }
+  100% { opacity: 0; transform: translateY(-10vh) rotate(360deg) scale(0.3); }
+}
+
+/* === Gallery item hover glow === */
+.gallery-item::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius-md);
+  background: linear-gradient(135deg, rgba(236, 64, 122, 0.2), rgba(212, 165, 116, 0.2));
+  opacity: 0;
+  transition: var(--transition);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.gallery-item:hover::after {
+  opacity: 1;
+}
+
+/* === Section title sparkle decoration === */
+.section-title {
+  position: relative;
+}
+
+.section-title::before,
+.section-title::after {
+  content: '✨';
+  position: absolute;
+  font-size: 1rem;
+  animation: sectionSparkle 3s ease-in-out infinite;
+}
+
+.section-title::before {
+  left: -1.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.section-title::after {
+  right: -1.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  animation-delay: 1.5s;
+}
+
+@keyframes sectionSparkle {
+  0%, 100% { opacity: 0.3; transform: translateY(-50%) scale(0.8); }
+  50% { opacity: 1; transform: translateY(-50%) scale(1.2); }
+}
+
+/* === About stat hover bounce === */
+.about-stat {
+  position: relative;
+  overflow: hidden;
+}
+
+.about-stat::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(236, 64, 122, 0.08) 0%, transparent 70%);
+  opacity: 0;
+  transition: var(--transition);
+}
+
+.about-stat:hover::before {
+  opacity: 1;
+}
+
+.about-stat-num {
+  animation: statBounce 4s ease-in-out infinite;
+}
+
+.about-stat:nth-child(2) .about-stat-num {
+  animation-delay: 0.5s;
+}
+
+.about-stat:nth-child(3) .about-stat-num {
+  animation-delay: 1s;
+}
+
+@keyframes statBounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+/* === Contact card shimmer === */
+.contact-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(236, 64, 122, 0.06), transparent);
+  transition: 0.6s;
+}
+
+.contact-card:hover::before {
+  left: 100%;
+}
+
+/* === Floating button heartbeat === */
+.floating-book-btn {
+  animation: floatPulse 3s ease infinite, heartbeat 2s ease-in-out infinite;
+}
+
+@keyframes heartbeat {
+  0%, 100% { transform: scale(1); }
+  14% { transform: scale(1.05); }
+  28% { transform: scale(1); }
+  42% { transform: scale(1.05); }
+  70% { transform: scale(1); }
+}
+
+/* === Nav link sparkle on hover === */
+.nav-link {
+  position: relative;
+}
+
+.nav-link::before {
+  content: '✦';
+  position: absolute;
+  left: -0.8rem;
+  top: 50%;
+  transform: translateY(-50%) scale(0);
+  font-size: 0.6rem;
+  color: var(--pink);
+  transition: var(--transition);
+  opacity: 0;
+}
+
+.nav-link:hover::before {
+  transform: translateY(-50%) scale(1);
+  opacity: 1;
+}
+
+/* === Mobile menu sparkle === */
+.mobile-menu-link {
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.mobile-menu-link::before {
+  content: '🐾';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  filter: grayscale(100%) brightness(0.7);
+  font-size: 0.8rem;
+}
+
+/* === About image frame glow === */
+.about-image-frame {
+  animation: frameGlow 4s ease-in-out infinite;
+}
+
+@keyframes frameGlow {
+  0%, 100% { box-shadow: var(--shadow-lg), 0 0 20px rgba(236, 64, 122, 0.1); }
+  50% { box-shadow: var(--shadow-lg), 0 0 40px rgba(236, 64, 122, 0.25); }
+}
+
+/* === Hero badge shimmer === */
+.hero-badge {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-badge::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  animation: badgeShimmer 3s ease-in-out infinite;
+}
+
+@keyframes badgeShimmer {
+  0% { left: -100%; }
+  50% { left: 150%; }
+  100% { left: 150%; }
+}
+
+/* === Scroll indicator cute bounce === */
+.hero-scroll-arrow {
+  animation: cuteBounce 2s ease-in-out infinite;
+}
+
+@keyframes cuteBounce {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  25% { transform: translateY(5px) rotate(5deg); }
+  75% { transform: translateY(5px) rotate(-5deg); }
+}
+
+/* === Sparkles around Kuro image === */
+.sparkles-container {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.sparkle {
+  position: absolute;
+  font-size: 1.2rem;
+  animation: sparkleFloat 2.5s ease-in-out infinite;
+  animation-delay: var(--delay, 0s);
+  opacity: 0;
+  filter: drop-shadow(0 0 4px rgba(255, 215, 0, 0.6));
+}
+
+@keyframes sparkleFloat {
+  0% { opacity: 0; transform: scale(0.3) translateY(0) rotate(0deg); }
+  20% { opacity: 1; transform: scale(1.1) translateY(-5px) rotate(15deg); }
+  40% { opacity: 0.8; transform: scale(0.9) translateY(-10px) rotate(-10deg); }
+  60% { opacity: 1; transform: scale(1.2) translateY(-8px) rotate(20deg); }
+  80% { opacity: 0.6; transform: scale(0.8) translateY(-15px) rotate(-5deg); }
+  100% { opacity: 0; transform: scale(0.3) translateY(-20px) rotate(0deg); }
+}
+
+/* === Paw icon color change to gray === */
+.nav-logo-icon {
+  filter: grayscale(100%) brightness(0.7);
+  display: inline-block;
+}
+
+.footer-logo {
+  filter: grayscale(100%) brightness(0.8);
+}
+
+.section-badge {
+  filter: grayscale(100%) brightness(0.6);
+}
+
+/* === Cute floating hearts animation === */
+.floating-hearts {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.floating-heart {
+  position: absolute;
+  font-size: 1rem;
+  opacity: 0;
+  animation: heartFloat 8s ease-in-out infinite;
+}
+
+@keyframes heartFloat {
+  0% { opacity: 0; transform: translateY(100vh) rotate(0deg) scale(0.5); }
+  10% { opacity: 0.4; }
+  50% { opacity: 0.3; transform: translateY(50vh) rotate(180deg) scale(1); }
+  90% { opacity: 0.1; }
+  100% { opacity: 0; transform: translateY(-10vh) rotate(360deg) scale(0.3); }
+}
+
+/* === Gallery item hover glow === */
+.gallery-item::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius-md);
+  background: linear-gradient(135deg, rgba(236, 64, 122, 0.2), rgba(212, 165, 116, 0.2));
+  opacity: 0;
+  transition: var(--transition);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.gallery-item:hover::after {
+  opacity: 1;
+}
+
+/* === Section title sparkle decoration === */
+.section-title {
+  position: relative;
+}
+
+.section-title::before,
+.section-title::after {
+  content: '✨';
+  position: absolute;
+  font-size: 1rem;
+  animation: sectionSparkle 3s ease-in-out infinite;
+}
+
+.section-title::before {
+  left: -1.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.section-title::after {
+  right: -1.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  animation-delay: 1.5s;
+}
+
+@keyframes sectionSparkle {
+  0%, 100% { opacity: 0.3; transform: translateY(-50%) scale(0.8); }
+  50% { opacity: 1; transform: translateY(-50%) scale(1.2); }
+}
+
+/* === About stat hover bounce === */
+.about-stat {
+  position: relative;
+  overflow: hidden;
+}
+
+.about-stat::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(236, 64, 122, 0.08) 0%, transparent 70%);
+  opacity: 0;
+  transition: var(--transition);
+}
+
+.about-stat:hover::before {
+  opacity: 1;
+}
+
+.about-stat-num {
+  animation: statBounce 4s ease-in-out infinite;
+}
+
+.about-stat:nth-child(2) .about-stat-num {
+  animation-delay: 0.5s;
+}
+
+.about-stat:nth-child(3) .about-stat-num {
+  animation-delay: 1s;
+}
+
+@keyframes statBounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+/* === Contact card shimmer === */
+.contact-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(236, 64, 122, 0.06), transparent);
+  transition: 0.6s;
+}
+
+.contact-card:hover::before {
+  left: 100%;
+}
+
+/* === Floating button heartbeat === */
+.floating-book-btn {
+  animation: floatPulse 3s ease infinite, heartbeat 2s ease-in-out infinite;
+}
+
+@keyframes heartbeat {
+  0%, 100% { transform: scale(1); }
+  14% { transform: scale(1.05); }
+  28% { transform: scale(1); }
+  42% { transform: scale(1.05); }
+  70% { transform: scale(1); }
+}
+
+/* === Nav link sparkle on hover === */
+.nav-link {
+  position: relative;
+}
+
+.nav-link::before {
+  content: '✦';
+  position: absolute;
+  left: -0.8rem;
+  top: 50%;
+  transform: translateY(-50%) scale(0);
+  font-size: 0.6rem;
+  color: var(--pink);
+  transition: var(--transition);
+  opacity: 0;
+}
+
+.nav-link:hover::before {
+  transform: translateY(-50%) scale(1);
+  opacity: 1;
+}
+
+/* === Mobile menu sparkle === */
+.mobile-menu-link {
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.mobile-menu-link::before {
+  content: '🐾';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  filter: grayscale(100%) brightness(0.7);
+  font-size: 0.8rem;
+}
+
+/* === About image frame glow === */
+.about-image-frame {
+  animation: frameGlow 4s ease-in-out infinite;
+}
+
+@keyframes frameGlow {
+  0%, 100% { box-shadow: var(--shadow-lg), 0 0 20px rgba(236, 64, 122, 0.1); }
+  50% { box-shadow: var(--shadow-lg), 0 0 40px rgba(236, 64, 122, 0.25); }
+}
+
+/* === Hero badge shimmer === */
+.hero-badge {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-badge::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  animation: badgeShimmer 3s ease-in-out infinite;
+}
+
+@keyframes badgeShimmer {
+  0% { left: -100%; }
+  50% { left: 150%; }
+  100% { left: 150%; }
+}
+
+/* === Scroll indicator cute bounce === */
+.hero-scroll-arrow {
+  animation: cuteBounce 2s ease-in-out infinite;
+}
+
+@keyframes cuteBounce {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  25% { transform: translateY(5px) rotate(5deg); }
+  75% { transform: translateY(5px) rotate(-5deg); }
+}
+
 .about-stat-link {
   color: var(--pink-dark);
   font-weight: 600;

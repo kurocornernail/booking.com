@@ -27,6 +27,7 @@
     initScrollAnimations();
     initParticles();
     initTouchSwipe();
+    initFloatingHearts();
   });
 
   // === Loader ===
@@ -364,6 +365,25 @@
         }
       }
     }, { passive: true });
+  }
+
+  // === Floating Hearts ===
+  function initFloatingHearts() {
+    const container = document.getElementById('floatingHearts');
+    if (!container) return;
+
+    const hearts = ['💖', '', '', '✨', '', '🐾'];
+
+    for (let i = 0; i < 15; i++) {
+      const heart = document.createElement('div');
+      heart.className = 'floating-heart';
+      heart.textContent = hearts[Math.floor(Math.random() * hearts.length)];
+      heart.style.left = Math.random() * 100 + '%';
+      heart.style.animationDelay = (Math.random() * 8) + 's';
+      heart.style.animationDuration = (Math.random() * 6 + 6) + 's';
+      heart.style.fontSize = (Math.random() * 0.8 + 0.6) + 'rem';
+      container.appendChild(heart);
+    }
   }
 
 })();
